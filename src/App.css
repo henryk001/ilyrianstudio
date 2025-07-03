@@ -1,0 +1,217 @@
+/* Base layout */
+body,
+html,
+.app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ffccd5, #ffe6eb);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #400000;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Content card with clean shadow */
+.content {
+  background-color: #fff;
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  max-width: 520px;
+  width: 100%;
+  box-sizing: border-box;
+  user-select: none;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.content:hover {
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo image */
+.logo {
+  width: 60%;
+  max-width: 320px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  user-select: none;
+}
+
+/* Studio title */
+.studio-title {
+  font-size: 2.6rem;
+  font-weight: 900;
+  margin: 0 0 0.6rem;
+  user-select: none;
+}
+
+.ilyrian {
+  color: #000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.studio {
+  color: #b32025;
+  margin-left: 0.3em;
+}
+
+/* Centered divider */
+.divider {
+  border: none;
+  border-top: 2px solid #b32025;
+  width: 50%;
+  margin: 0.7rem auto 1.5rem;
+  opacity: 0.6;
+  border-radius: 1px;
+}
+
+/* Coming soon text with BOOM effect */
+.coming-soon {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #e1306c;
+  margin-bottom: 1.8rem;
+  user-select: none;
+
+  animation: boomEffect 0.8s ease-out;
+}
+
+/* BOOM animation */
+@keyframes boomEffect {
+  0% {
+    transform: scale(0.6) rotate(-2deg);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.15) rotate(1deg);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(0.95) rotate(-1deg);
+  }
+  80% {
+    transform: scale(1.05) rotate(0.5deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Countdown timer */
+.countdown {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2.5rem;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+}
+
+.countdown div {
+  min-width: 70px;
+}
+
+.countdown strong {
+  font-size: 1.8rem;
+  color: #400000;
+  display: block;
+}
+
+.countdown span {
+  font-size: 0.9rem;
+  color: #666666;
+  user-select: none;
+}
+
+/* Instagram link */
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #e1306c;
+  font-weight: 700;
+  font-size: 1.15rem;
+  gap: 8px;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.instagram-link:hover,
+.instagram-link:focus {
+  color: #b31252;
+  outline: none;
+}
+
+.instagram-link img {
+  width: 26px;
+  height: 26px;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #400000;
+  user-select: none;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .content {
+    padding: 1.5rem 1.8rem;
+    max-width: 90%;
+  }
+
+  .logo {
+    max-width: 220px;
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+
+  .studio-title {
+    font-size: 1.9rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .divider {
+    width: 70%;
+    margin: 0.5rem auto 1rem;
+  }
+
+  .coming-soon {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .countdown {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .countdown div {
+    min-width: auto;
+  }
+
+  .countdown strong {
+    font-size: 1.4rem;
+  }
+
+  .countdown span {
+    font-size: 0.8rem;
+  }
+
+  .instagram-link {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
